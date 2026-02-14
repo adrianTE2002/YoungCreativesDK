@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+// import Button from "../components/Button.astro";
+const { placeholder, titel, text, buttonText, order } = Astro.props;
+---
+
+<section class="medlem">
+  <Image src={placeholder} alt="Bestyrelse medlem" class="placeholder" />
+  <div class="medlem-info" style={`order: ${order}`}>
+    <h2>{titel}</h2>
+    <p>{text}</p>
+    <!-- <Button buttonText={buttonText} /> -->
+  </div>
+</section>
+
+<style define:vars={{ order }}>
+  .placeholder {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .medlem-info {
+    order: var(--order);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .medlem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column: 2 / span 1;
+    align-items: center;
+    margin: 40px 0;
+    gap: 5rem;
+  }
+</style>
