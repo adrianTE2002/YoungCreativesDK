@@ -1,5 +1,6 @@
 ---
-
+import Medlemmer from "./components/Medlemmer.astro";
+const { placeholder, buttonText, order } = Astro.props;
 ---
 
 <html lang="en">
@@ -55,24 +56,34 @@
       </section>
 
       <section>
-        <h1>Mød bestyrelsen</h1>
-        <p>det her er bestyrelsen</p>
-        <div class="medlem">
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="medlem">
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="medlem">
-          <img src="" alt="" />
-          <p></p>
-        </div>
-        <div class="medlem">
-          <img src="" alt="" />
-          <p></p>
-        </div>
+        <Medlemmer
+          placeholder="#"
+          titel="Jake Brook"
+          text="“Jeg er trådt ind i bestyrelsen, fordi YCDK hjalp mig med at overkomme min socialangst med networking. Den oplevelse vil jeg gerne give videre og lære fra mig, så meget som jeg kan.”"
+          buttonText="Læs mere"
+          order="1"
+        />
+        <Medlemmer
+          placeholder="#"
+          titel="Sanne Kragh"
+          text="“Jeg er trådt ind i bestyrelsen, fordi jeg har ikke taget den klassiske vej ind i branchen og har selv stået udenfor og kigget (lidt undrende og meget nysgerrigt) ind. YCDK hjalp mig med at åbne døren, så jeg fik en fod indenfor. Derfor vil jeg gerne hjælpe andre nye, så deres entré bliver lidt nemmere.”"
+          buttonText="Læs mere"
+          order="2"
+        />
+        <Medlemmer
+          placeholder="#"
+          titel="Sarah Sabir"
+          text="“Jeg er trådt ind i bestyrelsen, fordi jeg gerne vil bidrage med min viden om den kreative branche og udbrede budskabet til unge om, at kreativt arbejde ikke kun behøver at manifestere sig i et 9-17 job på bureau.”"
+          buttonText="Læs mere"
+          order="3"
+        />
+        <Medlemmer
+          placeholder="#"
+          titel="Rebecca Laursen"
+          text="“Jeg er trådt ind i bestyrelsen fordi jeg syndes, det vi laver er vigtigt. Branchen kan hurtigt blive en lukket klub, og unge kreative fortjener reelle muligheder for at få foden indenfor.”"
+          buttonText="Læs mere"
+          order="4"
+        />
       </section>
     </main>
     <footer>
