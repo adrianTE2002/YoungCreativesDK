@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+// import Button from "../components/Button.astro";
+const { placeholder, titel, text, buttonText, order } = Astro.props;
+---
+
+<section>
+  <Image src={placeholder} alt="Bestyrelse medlem" class="placeholder" />
+  <div class="medlem-info" style={`order: ${order}`}>
+    <h2>{titel}</h2>
+    <p>{text}</p>
+    <!-- <Button buttonText={buttonText} /> -->
+  </div>
+</section>
