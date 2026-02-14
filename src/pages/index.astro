@@ -1,5 +1,9 @@
 ---
-import Medlemmer from "./components/Medlemmer.astro";
+import Medlemmer from "../components/Medlemmer.astro";
+import Jake from "../assets/Jake_Brook.jpg";
+import Sanne from "../assets/Sanne_Kragh.jpg";
+import Sarah from "../assets/Sarah_Sabir.jpg";
+import Rebecca from "../assets/Rebecca_Laursen.jpg";
 const { placeholder, buttonText, order } = Astro.props;
 ---
 
@@ -10,9 +14,9 @@ const { placeholder, buttonText, order } = Astro.props;
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex,nofollow" />
     <title>Astro</title>
-  </head>
-  <body>
+  </head><body>
     <header>
       <a href="index.astro">
         <img src="" alt="logo" />
@@ -57,32 +61,32 @@ const { placeholder, buttonText, order } = Astro.props;
 
       <section>
         <Medlemmer
-          placeholder="#"
+          placeholder={Jake}
           titel="Jake Brook"
           text="“Jeg er trådt ind i bestyrelsen, fordi YCDK hjalp mig med at overkomme min socialangst med networking. Den oplevelse vil jeg gerne give videre og lære fra mig, så meget som jeg kan.”"
           buttonText="Læs mere"
           order="1"
         />
         <Medlemmer
-          placeholder="#"
+          placeholder={Sanne}
           titel="Sanne Kragh"
           text="“Jeg er trådt ind i bestyrelsen, fordi jeg har ikke taget den klassiske vej ind i branchen og har selv stået udenfor og kigget (lidt undrende og meget nysgerrigt) ind. YCDK hjalp mig med at åbne døren, så jeg fik en fod indenfor. Derfor vil jeg gerne hjælpe andre nye, så deres entré bliver lidt nemmere.”"
           buttonText="Læs mere"
-          order="2"
+          order="-1"
         />
         <Medlemmer
-          placeholder="#"
+          placeholder={Sarah}
           titel="Sarah Sabir"
           text="“Jeg er trådt ind i bestyrelsen, fordi jeg gerne vil bidrage med min viden om den kreative branche og udbrede budskabet til unge om, at kreativt arbejde ikke kun behøver at manifestere sig i et 9-17 job på bureau.”"
           buttonText="Læs mere"
-          order="3"
+          order="1"
         />
         <Medlemmer
-          placeholder="#"
+          placeholder={Rebecca}
           titel="Rebecca Laursen"
           text="“Jeg er trådt ind i bestyrelsen fordi jeg syndes, det vi laver er vigtigt. Branchen kan hurtigt blive en lukket klub, og unge kreative fortjener reelle muligheder for at få foden indenfor.”"
           buttonText="Læs mere"
-          order="4"
+          order="-1"
         />
       </section>
     </main>
