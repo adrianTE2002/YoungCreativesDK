@@ -1,0 +1,26 @@
+---
+const { Text } = Astro.props;
+---
+
+<button>{Text}</button>
+
+<style>
+  button {
+    height: fit-content;
+    padding: 0.5rlh 1rlh;
+    /*|----------+----------|*/
+    color: #000;
+    font-weight: bold;
+    background-color: var(--color_white);
+    border: none;
+    border-radius: 2rlh;
+    cursor: pointer;
+  }
+  button:hover {
+    scale: 1.1;
+  }
+  button:active {
+    background-color: var(--color_primary-pink);
+    scale: 1;
+  }
+</style>

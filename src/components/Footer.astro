@@ -1,0 +1,43 @@
+<footer>
+  <section class="mini-header">
+    <img src="../assets/YCDK_primary-logo.svg" alt="Young creatives Denmark" />
+    <p>Vi bygger bro mellem bureau og kreativ</p>
+  </section>
+  <section class="contact">
+    <div class="socials">
+      <h4>Socials</h4>
+      <a href=""><p>FaceBook</p></a>
+      <a href=""><p>InstaGram</p></a>
+    </div>
+    <div>
+      <h4>Telefon</h4>
+      <p>60 91 43 26</p>
+    </div>
+    <div>
+      <h4>Adresse</h4>
+      <p>Jacob Cameron Brook, Landskronagade 27, st.</p>
+      <p>2100 København Ø</p>
+    </div>
+  </section>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mini-header {
+    width: 33%;
+    text-align: center;
+  }
+  .contact {
+    width: 33%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    div:not(:first-of-type) {
+      grid-column: 2;
+    }
+  }
+</style>

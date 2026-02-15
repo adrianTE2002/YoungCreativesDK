@@ -1,0 +1,45 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<body>
+  <Header />
+  <slot />
+  <Footer />
+</body>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header,
+    footer {
+      padding: 2rlh 10vw;
+      background-color: var(--color_primary-blue);
+      color: var(--color_white);
+    }
+    main {
+      padding: 2rlh 15vw;
+      display: flex;
+      flex-direction: column;
+      gap: 1rlh;
+    }
+  }
+  html {
+    /*+----------| CUSTOM COLOURS |----------+*/
+    --color_black: #01090f;
+    --color_white: #fff;
+    --color_primary-blue: #24547c;
+    --color_secondary-blue: #82c2f0;
+    --color_primary-pink: #f1a3c3;
+  }
+</style>
