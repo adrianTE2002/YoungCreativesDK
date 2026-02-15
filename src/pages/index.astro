@@ -1,10 +1,6 @@
 ---
-import Medlemmer from "../components/Medlemmer.astro";
-import Jake from "../assets/Jake_Brook.jpg";
-import Sanne from "../assets/Sanne_Kragh.jpg";
-import Sarah from "../assets/Sarah_Sabir.jpg";
-import Rebecca from "../assets/Rebecca_Laursen.jpg";
-const { placeholder, buttonText, order } = Astro.props;
+import Page from "../layout/Page.astro";
+import Cta_card from "../components/Cta_card.astro";
 ---
 
 <html lang="en">
@@ -16,95 +12,51 @@ const { placeholder, buttonText, order } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="noindex,nofollow" />
     <title>Astro</title>
-  </head><body>
-    <header>
-      <a href="index.astro">
-        <img src="" alt="logo" />
-      </a>
-      <button> Kontakt os </button>
-      <section class="hero">
-        <img src="" alt="herosectionlogo" />
-        <p>Vi bygger bro mellem bureau og kreativ</p>
-      </section>
-    </header>
-
+  </head>
+  <Page>
     <main>
-      <section>
-        <h1>Hvem er vi - og hvad er vores mål?</h1>
+      <!--+----------| MIDLERTIDIGT |----------+-->
+      <div class="temporary_content">
+        <h1>Overskrift</h1>
+        <p>Noget content</p>
+        <h2>Overskrift</h2>
         <p>
-          Det startede med en øl - En øl blev til en snak. Og snakken endte i en diskussion om et simpelt spørgsmål. "Hvorfor er der ikke et netværk for unge i den danske kommunikationsbranche?. Et netværk hvor unge kan diskutere og dele
-          kommunikation og kreativitet?". <br /><br />Men det er der nu. Og med din hjælp. Alle der vil være med, må være med. Siden her er både netværkets epicenter for aktiviteter, men også stedet hvor vi kan dele og diskutere vores egne og andres
-          idéer - altid med et fagligt fokus og med respekt for hinanden og vores fag.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sit facilis minima consequatur iusto, sequi harum nulla voluptatibus omnis doloremque dolorem possimus iste nam eligendi
+          laudantium, accusantium dignissimos nihil maxime, ad blanditiis consequuntur expedita modi. Voluptas molestiae nobis autem reprehenderit aspernatur modi optio quasi, numquam sit quia eos ad
+          itaque?
         </p>
-      </section>
-      <section>
-        <div>
-          <img src="" alt="" />
-          <h2></h2>
-          <p></p>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h2></h2>
-          <p></p>
-        </div>
-        <div>
-          <img src="" alt="" />
-          <h2></h2>
-          <p></p>
-        </div>
-      </section>
-      <section>
-        <h1></h1>
-        <button></button>
-      </section>
-
-      <section>
-        <Medlemmer
-          placeholder={Jake}
-          titel="Jake Brook"
-          text="“Jeg er trådt ind i bestyrelsen, fordi YCDK hjalp mig med at overkomme min socialangst med networking. Den oplevelse vil jeg gerne give videre og lære fra mig, så meget som jeg kan.”"
-          buttonText="Læs mere"
-          order="1"
-        />
-        <Medlemmer
-          placeholder={Sanne}
-          titel="Sanne Kragh"
-          text="“Jeg er trådt ind i bestyrelsen, fordi jeg har ikke taget den klassiske vej ind i branchen og har selv stået udenfor og kigget (lidt undrende og meget nysgerrigt) ind. YCDK hjalp mig med at åbne døren, så jeg fik en fod indenfor. Derfor vil jeg gerne hjælpe andre nye, så deres entré bliver lidt nemmere.”"
-          buttonText="Læs mere"
-          order="-1"
-        />
-        <Medlemmer
-          placeholder={Sarah}
-          titel="Sarah Sabir"
-          text="“Jeg er trådt ind i bestyrelsen, fordi jeg gerne vil bidrage med min viden om den kreative branche og udbrede budskabet til unge om, at kreativt arbejde ikke kun behøver at manifestere sig i et 9-17 job på bureau.”"
-          buttonText="Læs mere"
-          order="1"
-        />
-        <Medlemmer
-          placeholder={Rebecca}
-          titel="Rebecca Laursen"
-          text="“Jeg er trådt ind i bestyrelsen fordi jeg syndes, det vi laver er vigtigt. Branchen kan hurtigt blive en lukket klub, og unge kreative fortjener reelle muligheder for at få foden indenfor.”"
-          buttonText="Læs mere"
-          order="-1"
-        />
-      </section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias facere aliquam corporis aperiam omnis iusto hic sit vero nihil tempora consectetur nam nemo, modi, quo distinctio ex, enim
+          voluptatum. Modi, pariatur rerum laborum tempore neque ex iste iure dolorem non mollitia nulla temporibus eius eaque dolorum corrupti error, doloribus vero eligendi aperiam, exercitationem
+          consectetur sunt natus magnam aspernatur. Saepe ut impedit quas labore, facere vero placeat ratione minus repellat aspernatur, deleniti optio. Sequi ducimus cum cumque, vitae impedit odio,
+          et omnis quisquam non doloribus molestiae excepturi aut. Tenetur odio porro optio nulla minima quisquam qui iure asperiores, sapiente libero id.
+        </p>
+      </div>
+      <Cta_card />
+      <div class="temporary_content">
+        <h2>Overskrift</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quisquam natus consectetur cumque iste vel ratione id ab temporibus sit. Aut adipisci quo odio labore quam quaerat eum
+          velit nemo repellendus necessitatibus eveniet cum maxime autem facilis dolor ducimus alias quis, accusantium pariatur neque harum architecto! Quae hic eveniet at.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt debitis dolor ipsa labore ipsam, aliquam corrupti tempora aut tenetur sed, exercitationem incidunt accusantium minima in
+          iste aspernatur recusandae ex laudantium maxime et assumenda dolorum? Non ex distinctio natus ullam! Unde nulla sint, repellendus in perspiciatis obcaecati est corporis ipsam amet laboriosam
+          officia quos optio ad veniam eligendi accusamus, molestias corrupti pariatur rerum? Suscipit inventore asperiores aspernatur quasi tempora consectetur laboriosam, eaque quia ex sunt natus
+          alias enim nemo voluptatibus illum tenetur neque magni! Dolor enim facilis numquam fugit voluptas est animi sunt, nobis iure id quasi eligendi maiores inventore molestias?
+        </p>
+      </div>
+      <style>
+        .temporary_content {
+          padding: 1rlh 0.5rlh;
+          display: flex;
+          flex-direction: column;
+          gap: 1rlh;
+          outline: dashed 3px #070;
+          border-radius: 1rlh;
+        }
+      </style>
+      <!--+----------+----------+----------+-->
     </main>
-    <footer>
-      <img src="" alt="ycdk logo" />
-      <p></p>
-      <div>
-        <h4></h4>
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
-      </div>
-      <div>
-        <h4>Telefon</h4>
-        <a href="">+45 12345678</a>
-      </div>
-      <div>
-        <h4>Adresse</h4>
-      </div>
-    </footer>
-  </body>
+  </Page>
 </html>
