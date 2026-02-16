@@ -1,0 +1,166 @@
+---
+const cards = [
+  {
+    image: "src/assets/atila.png",
+    title: "Vi forbinder unge kreative med virksomheder i branchen",
+    text: `Ansigt til Ansigt er et event, hvor nye kreative får et kig bag kulissen hos nogle af Danmarks førende reklamebureauer.
+Du får indblik i bureauets arbejde deres kreative proces og mulighed for at møde (og vise dit arbejde til) branchens topkreative.`,
+  },
+  {
+    image: "src/assets/cannes1.png",
+    title: "Vi faciliterer at unge kreative kan skabe et stærkt netværk",
+    text: `På vores årlige tur til Cannes, samles der en masse unge kreative og fede bureaufolk under samme tag.
+Det oplagte miljø til at mingle med ligesindede og grave en masse uvurderlig viden ud af hjernerne på branchens store hajer.`,
+  },
+  {
+    image: "src/assets/hund14.png",
+    title: "Vi vejleder unge kreative igennem deres rejse til at blive designere",
+    text: `Uanset om du har et flyvefærdigt portfolio eller lige er begyndt reklame-gamet og endnu ikke har noget at vise frem.
+Vi sørger for at du kan få ærlig og konstruktiv feedback på dine projekter fra branchens topkreative.`,
+  },
+];
+---
+
+<section class="who">
+  <div class="container">
+    <div class="intro">
+      <h2>Hvem er vi - og hvad er vores mål?</h2>
+
+      <p class="lead">Det startede med en øl.</p>
+
+      <p>En øl blev til en snak. Og snakken endte i en diskussion om et simpelt spørgsmål: "Hvorfor er der ikke et netværk for unge i den danske kommunikationsbranche?. Et netværk hvor unge kan diskutere og dele kommunikation og kreativitet?".</p>
+
+      <p>
+        Men det er der nu - og med din hjælp. Alle der vil være med, må være med. Siden her er både netværkets epicenter for aktiviteter, men også stedet hvor vi kan dele og diskutere vores egne og andres idéer – altid med et fagligt fokus og med
+        respekt for hinanden og vores fag.
+      </p>
+    </div>
+
+    <div class="cards">
+      {
+        cards.map((card, index) => (
+          <article class="card">
+            <div class="image-wrapper">
+              <img src={card.image} alt="" loading="lazy" />
+
+              {index === 0 && (
+                <a href="https://www.instagram.com/youngcreativesdenmark/" target="_blank" rel="noopener noreferrer" class="external-btn" aria-label="Læs mere">
+                  ↗
+                </a>
+              )}
+            </div>
+
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .who {
+    background: #efefef;
+    padding: 90px 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .intro {
+    max-width: 900px;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #0b0f14;
+  }
+
+  .lead {
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  .intro p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    font-size: 17px;
+  }
+
+  /* Cards grid */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    margin-bottom: 18px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111827;
+  }
+
+  .card p {
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .who {
+      padding: 60px 20px;
+    }
+  }
+  .image-wrapper {
+    position: relative;
+  }
+
+  .external-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 36px;
+    height: 36px;
+
+    background: #f3f4f6;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.2s ease;
+  }
+
+  .external-btn:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+  }
+</style>
